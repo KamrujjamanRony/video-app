@@ -24,8 +24,8 @@ const Video = () => {
   }
   if (!isLoading && !isError && video?.id) {
     content = (<div className="grid grid-cols-3 gap-2 lg:gap-8">
-    <VideoDetails key={video.id} video={video} />
-    <RelatedVideos key={video.id} tags={video.tags} />
+    <VideoDetails video={video} />
+    <RelatedVideos id={video.id} tags={video.tags} />
   </div>)
   }
   return (

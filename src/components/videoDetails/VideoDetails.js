@@ -7,8 +7,8 @@ const VideoDetails = ({video}) => {
   return (
     <>
       <div className="col-span-full w-full space-y-8 lg:col-span-2">
-        <Player key={id} title={title} link={link} />
-        <Description key={id} video={video} />
+        <Player title={title} link={link} />
+        <Description video={video} />
       </div>
     </>
   );
