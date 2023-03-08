@@ -7,9 +7,10 @@ import VideoCard from "./VideoCard";
 
 const VideoGrid = () => {
   const dispatch = useDispatch();
+  const {tags, search} = useSelector(state=>state.filter);
   useEffect(()=>{
-    dispatch(fetchVideos())
-  },[dispatch])
+    dispatch(fetchVideos({tags, search}))
+  },[dispatch,tags,search])
   const {videos, isLoading, isError, error} = useSelector(state=>state.videos);
   let content;
   if (isLoading) {
